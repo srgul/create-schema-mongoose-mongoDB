@@ -8,10 +8,10 @@ var User = require("./users");
 db.once('open', function() {
     console.log("Ok!");
 
+    /*  --Save Data--
     var user_1 = new User({
         name: "Sait",
         surname: "Gul",
-        birtday: "10.01.1997",
         email: "saitramazangul@gmail.com"
     });
 
@@ -21,6 +21,46 @@ db.once('open', function() {
         } else {
             console.log("Ok save!")
         }
-    })
+    });
+    */
+
+
+    /*--Find Data--
+
+    User.find({}, function(err, result) {
+        if (err) {
+            throw err;
+        } else {
+            console.log(result);
+        }
+    });
+    
+    */
+
+    /* find Specify 
+
+    User.find({ name: "Sait" }, function(err, result) {
+        if (err) {
+            throw err;
+        } else {
+            console.log(result);
+        }
+    }); 
+
+    */
+
+
+    /* Remove data 
+    
+    User.remove({ id = "data_id" }, function(err, msg) {
+        if (err) {
+            throw err;
+        } else {
+            console.log(msg);
+        }
+    });
+
+    */
+
 
 });
