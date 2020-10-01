@@ -23,5 +23,4 @@ db.once('open', function() {
         }
     })
 
-
 });
